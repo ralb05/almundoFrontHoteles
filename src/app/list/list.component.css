@@ -1,0 +1,105 @@
+.hotel-item {
+  margin-bottom: 15px;
+}
+.hotel-item .card-body.row{
+  padding: 0.5em;
+  margin: 0px;
+}
+.hotel-item .hotel-image {
+  height: 192px;
+  background-size: cover;
+}
+.hotel-item h5 {
+  margin: 0px;
+}
+.resize-svg {
+  user-select: none;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.resize-stars-svg {
+  user-select: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.hotel-stars {
+  margin: 5px 0px 10px;
+}
+
+.hotel-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: space-around;
+  text-align: center;
+  padding-left:10px;
+  border-left: 1px dashed #CCC
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  color: #df6800;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.price-ars {
+  font-size:1rem;
+  font-weight:400;
+  padding-right:5px
+}
+
+.price-button {
+  color: #fff;
+  background: #002c77;
+  padding: 5px 30px;
+  font-size: 1.7rem;
+  border-radius: 5px;
+  text-decoration: none
+}
+
+.text-color-light-blue {
+  font-weight: 800;
+  color: #157ab1;
+}
+
+.text-color-gray {
+  font-weight: 400;
+  color: #444444;
+  font-size: small;
+}
+
+@media screen and (max-width: 600px) {
+
+  .hotel-image {
+    padding: 96px 0px;
+  }
+  .hotel-description {
+    margin-top: 15px;
+    padding-left: 0px;
+  }
+  .hotel-price {
+    margin: 15px 0px;
+    border-left: none;
+    border-top: 1px dashed #CCC
+  }
+  .price-button {
+    width: 100%;
+    padding: 5px 0px;
+  }
+  .hotel-item h5 {
+    margin-top: 10px;
+  }
+  .hotel-stars {
+    margin: 5px 0px;
+  }
+}
+

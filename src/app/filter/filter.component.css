@@ -1,0 +1,71 @@
+.card-deck {
+  margin-bottom: 3px;
+}
+.card .card-body{
+  padding: 15px;
+}
+.filter-caption {
+  background: #fff;
+  color: #444444;
+  font-weight: 800
+}
+.resize-svg {
+  user-select: none;
+  width: 25px;
+  height: 25px;
+  padding-right: 10px;
+  fill: #1f30ff;
+}
+.hotel-search-caption {
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: #157ab1;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.icon-search{
+  margin-left: 3px;
+  margin-right: 6px;
+}
+.arrow {
+  position: absolute;
+  right: 19px;
+}
+input::placeholder {
+  font-size: 13px;
+  padding: 0 5px;
+}
+
+.button-act {
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+  background: #002c77;
+  padding: 3px 10px;
+  border-radius: 3px;
+  border: none;
+  margin-left: 15px;
+  text-decoration: none
+}
+.resize-stars-svg {
+  user-select: none;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+.stars-checkbox {
+  margin-right: 5px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+@media screen and (max-width: 600px) {
+  .filter-caption {
+    text-align: center;
+    color: #157ab1;
+  }
+}

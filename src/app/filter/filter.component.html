@@ -1,0 +1,68 @@
+<div class="card-deck">
+  <div class="card shadow-sm">
+    <div class="card-body filter-caption" (click) = "toggleFiltersMobile=!toggleFiltersMobile">
+      <span>
+        Filtros
+        <i *ngIf="toggleFiltersMobile" class="fa fa-caret-up" aria-hidden="true"></i>
+        <i *ngIf="!toggleFiltersMobile" class="fa fa-caret-down" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+</div>
+<div class="card-deck" *ngIf="toggleFiltersMobile">
+  <div class="card shadow-sm">
+    <div class="card-body hotel-search">
+      <div class="hotel-search-caption" (click) = "toggleSearch=!toggleSearch">
+        <div class="icon-search">
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+         Nombre del hotel
+        <div class="arrow">
+          <i *ngIf="toggleSearch" class="fa fa-caret-up" aria-hidden="true"></i>
+          <i *ngIf="!toggleSearch" class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div *ngIf="toggleSearch">
+        <input class="hotel-search-input" type="text" placeholder="Ingrese el nombre del hotel"
+               [(ngModel)]="hotelName"/>
+        <button class="button-act" type="submit" (click)="sendFilterName()">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card-deck" *ngIf="toggleFiltersMobile">
+  <div class="card shadow-sm">
+    <div class="card-body hotel-search">
+      <div class="hotel-search-caption" (click) = "toggleStars=!toggleStars">
+        <div class="icon-search">
+          <i class="fa fa fa-star" aria-hidden="true"></i>
+        </div>
+        Estrellas
+        <div class="arrow">
+          <i *ngIf="toggleStars" class="fa fa-caret-up" aria-hidden="true"></i>
+          <i *ngIf="!toggleStars" class="fa fa-caret-down" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div *ngIf="toggleStars">
+        <div class="checkbox-div">
+          <label class="checkbox-label">
+            <input class="stars-checkbox" type="checkbox" name="all" value="all"
+                   [(ngModel)]="allChecked"
+                   (change)="changeStart(true)"/>Todas las estrellas
+          </label>
+        </div>
+        <div *ngFor="let option of options" class="checkbox-div">
+          <label class="checkbox-label">
+            <input class="stars-checkbox"
+                   type="checkbox"
+                   [name]="option.value"
+                   (change)="changeStart()"
+                   [value]="option.value"
+                   [(ngModel)]="option.checked"/>
+            <i *ngFor="let star of intToArray(option.value)" class="fa fa-star yellow resize-stars-svg" aria-hidden="true"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

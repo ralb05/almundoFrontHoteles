@@ -1,0 +1,11 @@
+.blue-background {
+  background: linear-gradient(#093b7d, #1a4784);
+}
+@media screen and (max-width: 600px) {
+  div.blue-background.mb-3, div.blue-background.my-3{
+    margin-bottom: 0px !important;
+  }
+  div.row > .no-padding-mobile {
+    padding: 0;
+  }
+}

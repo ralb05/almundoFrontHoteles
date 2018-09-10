@@ -1,0 +1,21 @@
+<div *ngFor="let hotel of hotels" class=" hotel-item card-deck" >
+  <div class="card shadow-sm">
+    <div class="card-body row">
+      <div class="col-sm-12 col-md-3  hotel-image" [style.background-image]="'url(assets/images/hotels/' + hotel.image + ')'"></div>
+      <div class="col-sm-12 col-md-6 hotel-description" >
+        <h5 class="text-color-light-blue">{{hotel.name}}</h5>
+        <div class="hotel-stars">
+          <i *ngFor="let star of intToArray(hotel.stars)" class="fa fa-star yellow resize-stars-svg" aria-hidden="true"></i>
+        </div>
+        <div class="hotel-amenities">
+          <img *ngFor="let amenitie of hotel.amenities" class="resize-svg" src="assets/icons/amenities/{{amenitie}}.svg" title="{{amenitie}}"/>
+        </div>
+      </div>
+      <div class="hotel-price col-sm-12 col-md-3">
+        <h5 class="text-color-gray">Precio por noche por habitación</h5>
+        <span class="price"><span class="price-ars">ARS</span>{{ (this.Math.round(hotel.price) | number).replace(",", ".") }}</span>
+        <a href="#" class="price-button">Ver hotel</a>
+      </div>
+    </div>
+  </div>
+</div>
