@@ -1,8 +1,9 @@
 # Hotel Exercise
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
+Install Node.js® and npm if they are not already on your machine.
 
-## Install
+## Install packages
 
 Run `npm i` This command installs the necessary packages for project execution.
 

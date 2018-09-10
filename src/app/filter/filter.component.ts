@@ -23,7 +23,7 @@ export class FilterComponent implements OnInit {
   constructor(private hotelsService: HotelsService) {
     this.toggleSearch = true;
     this.toggleStars = true;
-    this.toggleFiltersMobile = false;
+    this.toggleFiltersMobile = true;
   }
 
   ngOnInit(): void {
